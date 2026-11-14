@@ -1,0 +1,65 @@
+[
+ {
+  "mutant": "object-level owner check removed",
+  "file": "securehub/rbac.py",
+  "tests_run": 191,
+  "tests_failing": 10,
+  "caught": true
+ },
+ {
+  "mutant": "token signature not verified",
+  "file": "securehub/tokens.py",
+  "tests_run": 191,
+  "tests_failing": 5,
+  "caught": true
+ },
+ {
+  "mutant": "deny-overrides disabled",
+  "file": "lake/policy.py",
+  "tests_run": 191,
+  "tests_failing": 6,
+  "caught": true
+ },
+ {
+  "mutant": "filter on masked/hashed column allowed",
+  "file": "lake/policy.py",
+  "tests_run": 191,
+  "tests_failing": 4,
+  "caught": true
+ },
+ {
+  "mutant": "minimum group size (k) removed",
+  "file": "lake/policy.py",
+  "tests_run": 191,
+  "tests_failing": 1,
+  "caught": true
+ },
+ {
+  "mutant": "audit hash ignores entry content",
+  "file": "securehub/audit.py",
+  "tests_run": 191,
+  "tests_failing": 3,
+  "caught": true
+ },
+ {
+  "mutant": "gateway proof not checked by document service",
+  "file": "securehub/docsvc.py",
+  "tests_run": 191,
+  "tests_failing": 2,
+  "caught": true
+ },
+ {
+  "mutant": "lockout disabled",
+  "file": "securehub/app.py",
+  "tests_run": 191,
+  "tests_failing": 1,
+  "caught": true
+ },
+ {
+  "mutant": "original code (control)",
+  "file": "-",
+  "tests_run": 191,
+  "tests_failing": 0,
+  "caught": true
+ }
+]

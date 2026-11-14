@@ -1,0 +1,818 @@
+{
+ "meta": {
+  "python": "3.13.16",
+  "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39",
+  "cpus": 2,
+  "date": "2026-11-14",
+  "pyspark": "4.0.1",
+  "java": "21.0.12.1"
+ },
+ "rsa": {
+  "keygen": [
+   {
+    "bits": 512,
+    "median_s": 0.013150333500021816,
+    "runs": 8
+   },
+   {
+    "bits": 1024,
+    "median_s": 0.07422878999997806,
+    "runs": 8
+   },
+   {
+    "bits": 2048,
+    "median_s": 0.7349063139999998,
+    "runs": 3
+   }
+  ],
+  "sign_verify": [
+   {
+    "bits": 512,
+    "sign_ms": 0.6351499999652788,
+    "verify_ms": 0.016132500007870476
+   },
+   {
+    "bits": 1024,
+    "sign_ms": 3.5478050000392614,
+    "verify_ms": 0.048949999978731285
+   },
+   {
+    "bits": 2048,
+    "sign_ms": 24.17874500000039,
+    "verify_ms": 0.16878300002076685
+   }
+  ],
+  "openssl_genrsa": [
+   {
+    "bits": 512,
+    "median_s": 0.011819002999970962
+   },
+   {
+    "bits": 1024,
+    "median_s": 0.01604445800001031
+   },
+   {
+    "bits": 2048,
+    "median_s": 0.09579332800001339
+   }
+  ],
+  "openssl_version": "OpenSSL 3.0.13 30 Jan 2024 (Library: OpenSSL 3.0.13 30 Jan 2024)",
+  "token": {
+   "issue_ms": 3.801560499994139,
+   "verify_ms": 0.06189949999679811,
+   "bits": 1024
+  }
+ },
+ "pbkdf2": [
+  {
+   "iterations": 1000,
+   "ms": 0.24208849998785809
+  },
+  {
+   "iterations": 10000,
+   "ms": 2.3900104999938776
+  },
+  {
+   "iterations": 100000,
+   "ms": 24.040692999989233
+  },
+  {
+   "iterations": 600000,
+   "ms": 144.69955300000947
+  },
+  {
+   "iterations": 1000000,
+   "ms": 248.11935799999674
+  },
+  {
+   "md5_us": 0.4980000198884227
+  }
+ ],
+ "gateway": {
+  "public_ms": 0.2669204999676822,
+  "authenticated_ms": 0.3900849999922684,
+  "extra_ms": 0.12316450002458623,
+  "requests": 300,
+  "note": "authenticated = RSA-1024 verify + RBAC + HMAC proof + doc service + audit entry + 8 detection rules"
+ },
+ "policy": {
+  "plan_ms": 0.03569488000010779,
+  "rules": 10,
+  "columns": 13
+ },
+ "fp": {
+  "requests": 20626,
+  "users": 300,
+  "sweeps": [
+   {
+    "rule": "brute_force",
+    "threshold": 2,
+    "false_alerts": 26,
+    "per_10k_requests": 12.6
+   },
+   {
+    "rule": "brute_force",
+    "threshold": 3,
+    "false_alerts": 0,
+    "per_10k_requests": 0.0
+   },
+   {
+    "rule": "brute_force",
+    "threshold": 4,
+    "false_alerts": 0,
+    "per_10k_requests": 0.0
+   },
+   {
+    "rule": "brute_force",
+    "threshold": 5,
+    "false_alerts": 0,
+    "per_10k_requests": 0.0
+   },
+   {
+    "rule": "brute_force",
+    "threshold": 8,
+    "false_alerts": 0,
+    "per_10k_requests": 0.0
+   },
+   {
+    "rule": "privilege_escalation",
+    "threshold": 1,
+    "false_alerts": 176,
+    "per_10k_requests": 85.3
+   },
+   {
+    "rule": "privilege_escalation",
+    "threshold": 2,
+    "false_alerts": 13,
+    "per_10k_requests": 6.3
+   },
+   {
+    "rule": "privilege_escalation",
+    "threshold": 3,
+    "false_alerts": 1,
+    "per_10k_requests": 0.5
+   },
+   {
+    "rule": "privilege_escalation",
+    "threshold": 5,
+    "false_alerts": 0,
+    "per_10k_requests": 0.0
+   },
+   {
+    "rule": "object_enumeration",
+    "threshold": 2,
+    "false_alerts": 472,
+    "per_10k_requests": 228.8
+   },
+   {
+    "rule": "object_enumeration",
+    "threshold": 3,
+    "false_alerts": 106,
+    "per_10k_requests": 51.4
+   },
+   {
+    "rule": "object_enumeration",
+    "threshold": 4,
+    "false_alerts": 21,
+    "per_10k_requests": 10.2
+   },
+   {
+    "rule": "object_enumeration",
+    "threshold": 6,
+    "false_alerts": 0,
+    "per_10k_requests": 0.0
+   },
+   {
+    "rule": "object_enumeration",
+    "threshold": 8,
+    "false_alerts": 0,
+    "per_10k_requests": 0.0
+   },
+   {
+    "rule": "request_burst",
+    "threshold": 5,
+    "false_alerts": 2235,
+    "per_10k_requests": 1083.6
+   },
+   {
+    "rule": "request_burst",
+    "threshold": 8,
+    "false_alerts": 157,
+    "per_10k_requests": 76.1
+   },
+   {
+    "rule": "request_burst",
+    "threshold": 12,
+    "false_alerts": 0,
+    "per_10k_requests": 0.0
+   },
+   {
+    "rule": "request_burst",
+    "threshold": 20,
+    "false_alerts": 0,
+    "per_10k_requests": 0.0
+   },
+   {
+    "rule": "request_burst",
+    "threshold": 30,
+    "false_alerts": 0,
+    "per_10k_requests": 0.0
+   }
+  ]
+ },
+ "attacks": {
+  "attacks": [
+   {
+    "name": "brute_force",
+    "title": "Password guessing",
+    "expected": "brute_force",
+    "fired": [
+     "brute_force"
+    ],
+    "passed": true
+   },
+   {
+    "name": "token_tamper",
+    "title": "Edited token payload",
+    "expected": "token_tampering",
+    "fired": [
+     "token_tampering"
+    ],
+    "passed": true
+   },
+   {
+    "name": "alg_none",
+    "title": "alg=none token",
+    "expected": "token_tampering",
+    "fired": [
+     "token_tampering"
+    ],
+    "passed": true
+   },
+   {
+    "name": "expired_reuse",
+    "title": "Expired token reuse",
+    "expected": "expired_reuse",
+    "fired": [
+     "expired_reuse"
+    ],
+    "passed": true
+   },
+   {
+    "name": "priv_esc",
+    "title": "Privilege escalation",
+    "expected": "privilege_escalation",
+    "fired": [
+     "privilege_escalation"
+    ],
+    "passed": true
+   },
+   {
+    "name": "enumeration",
+    "title": "Object-id guessing",
+    "expected": "object_enumeration",
+    "fired": [
+     "object_enumeration",
+     "request_burst"
+    ],
+    "passed": true
+   },
+   {
+    "name": "burst",
+    "title": "Request burst",
+    "expected": "request_burst",
+    "fired": [
+     "request_burst"
+    ],
+    "passed": true
+   },
+   {
+    "name": "direct_call",
+    "title": "Bypass the gateway",
+    "expected": "token_tampering",
+    "fired": [
+     "token_tampering"
+    ],
+    "passed": true
+   },
+   {
+    "name": "bola",
+    "title": "BOLA: read another student's grades",
+    "expected": null,
+    "fired": [],
+    "passed": true
+   },
+   {
+    "name": "lake_overreach",
+    "title": "Data lake: analyst over-reach",
+    "expected": "repeated_denied",
+    "fired": [
+     "repeated_denied"
+    ],
+    "passed": true
+   },
+   {
+    "name": "lake_mass",
+    "title": "Data lake: mass access",
+    "expected": "mass_access",
+    "fired": [
+     "mass_access"
+    ],
+    "passed": true
+   },
+   {
+    "name": "lake_inference",
+    "title": "Data lake: inference by filtering",
+    "expected": null,
+    "fired": [],
+    "passed": true
+   }
+  ],
+  "passed": 12,
+  "total": 12,
+  "benign": {
+   "alerts": 0,
+   "false_positives": [],
+   "requests": 45
+  },
+  "log_entries": 164,
+  "chain_ok": true
+ },
+ "window": [
+  {
+   "entries": 10008,
+   "file_mb": 1.0,
+   "python_s": 0.05529063299997006,
+   "spark_s": 1.0981128589999685,
+   "same_alerts": true,
+   "alerts": [
+    [
+     "mass_access",
+     "eve"
+    ],
+    [
+     "repeated_denied",
+     "mallory"
+    ]
+   ]
+  },
+  {
+   "entries": 100008,
+   "file_mb": 10.5,
+   "python_s": 0.6777890010000078,
+   "spark_s": 1.468447345999948,
+   "same_alerts": true,
+   "alerts": [
+    [
+     "mass_access",
+     "eve"
+    ],
+    [
+     "repeated_denied",
+     "mallory"
+    ]
+   ]
+  },
+  {
+   "entries": 1000008,
+   "file_mb": 107.1,
+   "python_s": 8.614749335499994,
+   "spark_s": 10.630605619999983,
+   "same_alerts": true,
+   "alerts": [
+    [
+     "mass_access",
+     "eve"
+    ],
+    [
+     "repeated_denied",
+     "mallory"
+    ]
+   ]
+  }
+ ],
+ "lake": {
+  "sizes": [
+   {
+    "mb": 1,
+    "rows": 7074,
+    "csv_bytes": 1002589,
+    "parquet_bytes": 257206,
+    "gen_s": 0.07590933599999516,
+    "convert_s": 1.656644497000002,
+    "queries": {
+     "Q1": {
+      "label": "doctor: 100 rows of one diagnosis, sorted",
+      "baseline_ms": 127.44633299996622,
+      "controlled_ms": 143.78337600010127,
+      "overhead_pct": 12.818762702367737,
+      "plan_ms": 0.19099000007827271,
+      "rows_baseline": 100,
+      "rows_controlled": 100,
+      "repeats": 5,
+      "baseline_runs_ms": [
+       133.1,
+       219.5,
+       127.4,
+       108.9,
+       111.4
+      ],
+      "controlled_runs_ms": [
+       334.5,
+       143.4,
+       129.5,
+       152.9,
+       143.8
+      ]
+     },
+     "Q2": {
+      "label": "analyst: statistics by service and diagnosis",
+      "baseline_ms": 263.7742510000862,
+      "controlled_ms": 287.19867299992075,
+      "overhead_pct": 8.880480907830107,
+      "plan_ms": 0.24787200004539045,
+      "rows_baseline": 13,
+      "rows_controlled": 13,
+      "repeats": 5,
+      "baseline_runs_ms": [
+       388.0,
+       263.8,
+       548.8,
+       252.3,
+       167.8
+      ],
+      "controlled_runs_ms": [
+       413.9,
+       287.2,
+       283.0,
+       287.7,
+       233.1
+      ]
+     },
+     "Q3": {
+      "label": "analyst: visits per pseudonym (hash on every row)",
+      "baseline_ms": 186.33351300002232,
+      "controlled_ms": 186.00973700006307,
+      "overhead_pct": -0.17376154978584762,
+      "plan_ms": 0.14336399999592686,
+      "rows_baseline": 10,
+      "rows_controlled": 10,
+      "repeats": 5,
+      "baseline_runs_ms": [
+       220.6,
+       122.8,
+       103.9,
+       222.9,
+       186.3
+      ],
+      "controlled_runs_ms": [
+       137.1,
+       147.7,
+       186.0,
+       328.7,
+       269.7
+      ]
+     },
+     "Q4": {
+      "label": "administrator: count by service (no transformation needed)",
+      "baseline_ms": 116.29095599994344,
+      "controlled_ms": 131.95948099996713,
+      "overhead_pct": 13.473554211757715,
+      "plan_ms": 0.08517799994933739,
+      "rows_baseline": 6,
+      "rows_controlled": 6,
+      "repeats": 5,
+      "baseline_runs_ms": [
+       90.8,
+       107.9,
+       116.3,
+       118.7,
+       156.6
+      ],
+      "controlled_runs_ms": [
+       186.1,
+       103.7,
+       132.0,
+       146.5,
+       123.9
+      ]
+     }
+    },
+    "python_engine": {
+     "load_s": 0.03641676400002325,
+     "q2_s": 0.018176728999947045
+    }
+   },
+   {
+    "mb": 10,
+    "rows": 70748,
+    "csv_bytes": 10102137,
+    "parquet_bytes": 2404447,
+    "gen_s": 0.8186042769999631,
+    "convert_s": 1.3834887860000435,
+    "queries": {
+     "Q1": {
+      "label": "doctor: 100 rows of one diagnosis, sorted",
+      "baseline_ms": 82.8370570000061,
+      "controlled_ms": 95.10240599990993,
+      "overhead_pct": 14.806596762488716,
+      "plan_ms": 0.16016200004287384,
+      "rows_baseline": 100,
+      "rows_controlled": 100,
+      "repeats": 5,
+      "baseline_runs_ms": [
+       82.8,
+       115.1,
+       163.9,
+       77.7,
+       80.4
+      ],
+      "controlled_runs_ms": [
+       100.8,
+       105.4,
+       92.7,
+       69.8,
+       95.1
+      ]
+     },
+     "Q2": {
+      "label": "analyst: statistics by service and diagnosis",
+      "baseline_ms": 298.4781229999953,
+      "controlled_ms": 319.10053299998253,
+      "overhead_pct": 6.909186439767156,
+      "plan_ms": 0.15117700002065249,
+      "rows_baseline": 13,
+      "rows_controlled": 13,
+      "repeats": 5,
+      "baseline_runs_ms": [
+       410.3,
+       280.5,
+       298.5,
+       226.2,
+       373.7
+      ],
+      "controlled_runs_ms": [
+       405.9,
+       297.1,
+       319.1,
+       280.7,
+       378.5
+      ]
+     },
+     "Q3": {
+      "label": "analyst: visits per pseudonym (hash on every row)",
+      "baseline_ms": 150.21373700005825,
+      "controlled_ms": 229.98235799991562,
+      "overhead_pct": 53.10341290545647,
+      "plan_ms": 0.09180699998978525,
+      "rows_baseline": 10,
+      "rows_controlled": 10,
+      "repeats": 5,
+      "baseline_runs_ms": [
+       210.7,
+       162.1,
+       146.0,
+       143.7,
+       150.2
+      ],
+      "controlled_runs_ms": [
+       259.5,
+       197.2,
+       230.0,
+       315.7,
+       213.7
+      ]
+     },
+     "Q4": {
+      "label": "administrator: count by service (no transformation needed)",
+      "baseline_ms": 109.37936599998466,
+      "controlled_ms": 121.5977300000759,
+      "overhead_pct": 11.170629751221044,
+      "plan_ms": 0.10001900000133901,
+      "rows_baseline": 6,
+      "rows_controlled": 6,
+      "repeats": 5,
+      "baseline_runs_ms": [
+       115.0,
+       109.4,
+       110.4,
+       93.8,
+       103.5
+      ],
+      "controlled_runs_ms": [
+       144.8,
+       136.3,
+       109.9,
+       110.8,
+       121.6
+      ]
+     }
+    },
+    "python_engine": {
+     "load_s": 0.3674082579998412,
+     "q2_s": 0.24080840499982514
+    }
+   },
+   {
+    "mb": 100,
+    "rows": 707486,
+    "csv_bytes": 101731488,
+    "parquet_bytes": 22076757,
+    "gen_s": 8.507126379000056,
+    "convert_s": 2.6585774620000393,
+    "queries": {
+     "Q1": {
+      "label": "doctor: 100 rows of one diagnosis, sorted",
+      "baseline_ms": 90.9171299999798,
+      "controlled_ms": 113.55358599985266,
+      "overhead_pct": 24.897899878579405,
+      "plan_ms": 0.14720499984832713,
+      "rows_baseline": 100,
+      "rows_controlled": 100,
+      "repeats": 5,
+      "baseline_runs_ms": [
+       88.0,
+       94.7,
+       79.3,
+       90.9,
+       108.6
+      ],
+      "controlled_runs_ms": [
+       114.6,
+       111.4,
+       109.9,
+       113.6,
+       184.7
+      ]
+     },
+     "Q2": {
+      "label": "analyst: statistics by service and diagnosis",
+      "baseline_ms": 988.3056000001034,
+      "controlled_ms": 1374.108655999862,
+      "overhead_pct": 39.036817761603125,
+      "plan_ms": 0.13101800004733377,
+      "rows_baseline": 13,
+      "rows_controlled": 13,
+      "repeats": 5,
+      "baseline_runs_ms": [
+       978.0,
+       966.3,
+       989.2,
+       1050.5,
+       988.3
+      ],
+      "controlled_runs_ms": [
+       1374.1,
+       1382.2,
+       1338.5,
+       1300.1,
+       1442.6
+      ]
+     },
+     "Q3": {
+      "label": "analyst: visits per pseudonym (hash on every row)",
+      "baseline_ms": 461.2949300001219,
+      "controlled_ms": 801.115419000098,
+      "overhead_pct": 73.66664294356895,
+      "plan_ms": 0.09575000012773671,
+      "rows_baseline": 10,
+      "rows_controlled": 10,
+      "repeats": 5,
+      "baseline_runs_ms": [
+       538.5,
+       436.5,
+       493.8,
+       398.0,
+       461.3
+      ],
+      "controlled_runs_ms": [
+       728.4,
+       876.9,
+       801.1,
+       823.6,
+       786.6
+      ]
+     },
+     "Q4": {
+      "label": "administrator: count by service (no transformation needed)",
+      "baseline_ms": 121.44016999991436,
+      "controlled_ms": 133.46917100011524,
+      "overhead_pct": 9.905289987826402,
+      "plan_ms": 0.0900600000477425,
+      "rows_baseline": 6,
+      "rows_controlled": 6,
+      "repeats": 5,
+      "baseline_runs_ms": [
+       114.8,
+       121.4,
+       110.8,
+       135.1,
+       135.2
+      ],
+      "controlled_runs_ms": [
+       100.3,
+       133.5,
+       134.6,
+       148.8,
+       111.8
+      ]
+     }
+    },
+    "python_engine": {
+     "load_s": 3.6420513299999584,
+     "q2_s": 2.2094087210000453
+    }
+   },
+   {
+    "mb": 1000,
+    "rows": 7074862,
+    "csv_bytes": 1024352176,
+    "parquet_bytes": 224590673,
+    "gen_s": 95.535519771,
+    "convert_s": 26.710761820000016,
+    "queries": {
+     "Q1": {
+      "label": "doctor: 100 rows of one diagnosis, sorted",
+      "baseline_ms": 488.41315700002497,
+      "controlled_ms": 498.4198820000074,
+      "overhead_pct": 2.048823799392845,
+      "plan_ms": 0.21425799999974515,
+      "rows_baseline": 100,
+      "rows_controlled": 100,
+      "repeats": 3,
+      "baseline_runs_ms": [
+       821.1,
+       488.4,
+       403.9
+      ],
+      "controlled_runs_ms": [
+       592.3,
+       498.4,
+       481.9
+      ]
+     },
+     "Q2": {
+      "label": "analyst: statistics by service and diagnosis",
+      "baseline_ms": 10880.08788899998,
+      "controlled_ms": 14631.201539000016,
+      "overhead_pct": 34.47686901309408,
+      "plan_ms": 0.30308600003081665,
+      "rows_baseline": 13,
+      "rows_controlled": 13,
+      "repeats": 3,
+      "baseline_runs_ms": [
+       11564.4,
+       10880.1,
+       10485.5
+      ],
+      "controlled_runs_ms": [
+       14767.7,
+       14631.2,
+       14187.2
+      ]
+     },
+     "Q3": {
+      "label": "analyst: visits per pseudonym (hash on every row)",
+      "baseline_ms": 5500.7543020000185,
+      "controlled_ms": 8903.305457999977,
+      "overhead_pct": 61.85608316959049,
+      "plan_ms": 0.10040500001196051,
+      "rows_baseline": 10,
+      "rows_controlled": 10,
+      "repeats": 3,
+      "baseline_runs_ms": [
+       5310.8,
+       5879.5,
+       5500.8
+      ],
+      "controlled_runs_ms": [
+       8460.6,
+       9306.9,
+       8903.3
+      ]
+     },
+     "Q4": {
+      "label": "administrator: count by service (no transformation needed)",
+      "baseline_ms": 519.4199709999907,
+      "controlled_ms": 452.59529500003737,
+      "overhead_pct": -12.86524964977801,
+      "plan_ms": 0.14368199998671116,
+      "rows_baseline": 6,
+      "rows_controlled": 6,
+      "repeats": 3,
+      "baseline_runs_ms": [
+       466.5,
+       519.4,
+       629.6
+      ],
+      "controlled_runs_ms": [
+       444.0,
+       452.6,
+       504.9
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,11 @@
+# Required to run the platform and its tests
+flask>=3.0
+
+# Optional: the data lake can also run its queries on Apache Spark
+# (needs Java 17 or 21 installed; Python 3.9 or later)
+pyspark==4.0.1
+
+# Optional: browser tests and the report
+playwright
+reportlab
+matplotlib

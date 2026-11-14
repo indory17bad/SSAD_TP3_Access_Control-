@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SecureHub - access control lab</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <div class="brand"><b>SecureHub</b><span>SSAD TP3 · access control</span></div>
+  <nav id="nav"></nav>
+  <div id="who"><span id="whoText">not signed in</span> <button id="loginBtn">Sign in</button> <button id="logoutBtn" class="ghost" hidden>Sign out</button></div>
+</header>
+
+<main>
+  <section id="tab-home" class="tab"></section>
+  <section id="tab-token" class="tab" hidden></section>
+  <section id="tab-docs" class="tab" hidden></section>
+  <section id="tab-lake" class="tab" hidden></section>
+  <section id="tab-dash" class="tab" hidden></section>
+  <section id="tab-lab" class="tab" hidden></section>
+  <section id="tab-rsa" class="tab" hidden></section>
+</main>
+
+<footer>
+  <div class="foothead"><b>Last requests</b> <span class="muted">every call this page makes to the server, as the gateway answered it</span> <button id="clearLog" class="ghost small">clear</button></div>
+  <div id="reqlog"></div>
+</footer>
+
+<div id="modal" class="modal" hidden>
+  <div class="card">
+    <h2>Sign in</h2>
+    <p class="muted">The server checks your password against a salted PBKDF2 hash and, if correct, returns an RSA-signed token. Demo accounts (local lab only):</p>
+    <div id="demoUsers" class="chips"></div>
+    <label>Username <input id="lu" autocomplete="username"></label>
+    <label>Password <input id="lp" type="password" autocomplete="current-password"></label>
+    <div id="loginMsg" class="msg"></div>
+    <div class="row"><button id="doLogin">Sign in</button> <button id="closeLogin" class="ghost">Browse without signing in</button></div>
+  </div>
+</div>
+<script src="/static/app.js"></script>
+</body>
+</html>
